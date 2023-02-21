@@ -3,7 +3,7 @@ const { varifyToken } = require("../../../middlewares/varifyToken");
 const { createTask } = require("../../../modules/tasks/CreateTask");
 const { deleteTask } = require("../../../modules/tasks/DeleteTask");
 const { getTasks } = require("../../../modules/tasks/GetTask");
-const { sortTask } = require("../../../modules/tasks/sortTask");
+const { sortTask } = require("../../../modules/tasks/SortTask");
 const { updateTask } = require("../../../modules/tasks/UpdateTask");
 
 const apiRoutes = express.Router();
