@@ -3,16 +3,15 @@ dotenv.config();
 const nodemailer = require("nodemailer");
 
 let mail = nodemailer.createTransport({
-    host: "smtp-mail.outlook.com",
-    port: "587",
+    service:"gmail",
+    host: 'smtp.gmail.com',
+    port: 465,
+    secure: true,
     auth: {
         user: process.env.USER_EMAIL,
         pass: process.env.USER_PASS
-    },
-    tls: {
-        rejectUnauthorized: false
     }
-});
+}); 
 
 module.exports.sendVarificationMail = function (request, response) {
     let options = {
